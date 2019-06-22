@@ -17,8 +17,8 @@
         <link rel="Shortcut Icon" href="<?php echo $this->URL('resources/img/favicon.png'); ?>" type="image/png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="<?php echo $this->URL('resources/js/html5shiv.min.js'); ?>" async></script>
-        <script src="<?php echo $this->URL('resources/js/respond.min.js'); ?>"  async></script>
+        <script src="<?php echo $this->URL('resources/html5shiv.min.js'); ?>" async></script>
+        <script src="<?php echo $this->URL('resources/respond.min.js'); ?>"  async></script>
         <?php $this->Events()->Run('Head'); ?>
     </head>
     <body class="container-fluid FluitoPHP filemanager">

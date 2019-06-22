@@ -11,7 +11,7 @@ class indexBoot extends \FluitoPHP\Boot\Boot {
         \FluitoPHP\FluitoPHP::GetInstance()->
                 Events()->
                 Add('Head', function() {
-                    ?><script src="<?php echo \FluitoPHP\FluitoPHP::GetInstance()->Request()->URL("resources/js/tinymce/tinymce.min.js"); ?>"></script>
+                    ?><script src="<?php echo \FluitoPHP\FluitoPHP::GetInstance()->Request()->URL("resources/tinymce/tinymce.min.js"); ?>"></script>
                     <script>
                         tinymce.init({
                             selector: '.wysiwyg',
