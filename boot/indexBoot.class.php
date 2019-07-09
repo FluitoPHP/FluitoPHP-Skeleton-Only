@@ -38,7 +38,7 @@ class indexBoot extends \FluitoPHP\Boot\Boot {
                     file_picker_callback: function (callback, value, meta) {
                         tinymce.activeEditor.windowManager.open({
                             title: "File Manager",
-                            url: '<?php echo \FluitoPHP\FluitoPHP::GetInstance()->Request()->URL("fileman", "index", "index", null, array('allback ' => 'tmce ')); ?>',
+                            url: '<?php echo \FluitoPHP\FluitoPHP::GetInstance()->Request()->URL("fileman", "index", "index", null, array('callback' => 'tmce')); ?>',
                             width: (function () {
                                 return $(window).width();
                             })(),
@@ -113,9 +113,7 @@ class indexBoot extends \FluitoPHP\Boot\Boot {
 
                             var height = $(window).height() - 160;
 
-                            $('#FileManagerModal .modal-body').html($('<iframe src="<?php echo \FluitoPHP\FluitoPHP::GetInstance()->Request()->URL("fileman", "index", "index", null, array('
-            callback ' => '
-            FileManagerButtonModal ')); ?>" style="width: 100%; border: 0; height: ' + height + 'px;"></iframe>'));
+                            $('#FileManagerModal .modal-body').html($('<iframe src="<?php echo \FluitoPHP\FluitoPHP::GetInstance()->Request()->URL("fileman", "index", "index", null, array('callback' => 'FileManagerButtonModal')); ?>" style="width: 100%; border: 0; height: ' + height + 'px;"></iframe>'));
                         });
 
                         $('#FileManagerModal').on('hide.bs.modal', function (event) {
